@@ -199,18 +199,20 @@ const App = () => {
             <label className="block text-sm font-medium text-gray-700">
               API Key de OpenAI
             </label>
-            <div className="relative">
+            <div className="relative flex items-center w-full px-4 py-2 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent bg-white">
               <input
                 type={showApiKey ? "text" : "password"}
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
                 placeholder="sk-..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 bg-transparent border-none outline-none text-gray-800 placeholder-gray-400"
+                style={{ minWidth: 0 }}
               />
               <button
                 type="button"
                 onClick={() => setShowApiKey(!showApiKey)}
-                className="absolute right-3 top-2 text-gray-500 hover:text-gray-700"
+                className="ml-2 px-2 py-1 bg-white text-gray-500 hover:text-gray-700 rounded transition-colors z-10"
+                style={{ boxShadow: "0 0 0 2px white" }}
               >
                 {showApiKey ? "Ocultar" : "Mostrar"}
               </button>
