@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, useRef, type ChangeEvent } from "react";
+import { useState, useRef, type ChangeEvent } from "react";
 import {
   Upload,
   FileAudio,
@@ -173,7 +173,10 @@ const App = () => {
           <ul className="text-gray-700 space-y-2 text-sm">
             <li>
               • Obtén tu API key de OpenAI en :
-              <a className="text-blue-600" href="https://platform.openai.com/api-keys">
+              <a
+                className="text-blue-600"
+                href="https://platform.openai.com/api-keys"
+              >
                 {" "}
                 https://platform.openai.com/api-keys
               </a>
