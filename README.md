@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# Audio Transcription App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for transcribing audio files using the OpenAI Whisper API. This React-based tool allows users to upload audio files, transcribe them, and manage the resulting text with ease.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎤 Upload audio files for transcription
+- 🎧 Preview audio before transcribing
+- 🔒 Secure API key handling
+- 📝 View and copy transcriptions
+- 💾 Save transcriptions as text files
+- 🎨 Modern, responsive UI with Tailwind CSS
+- ⚡ Built with Vite for fast development
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js (v16 or later)
+- npm, yarn, or pnpm
+- An OpenAI API key with access to the Whisper API
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/audio-transcriptions.git
+   cd audio-transcriptions
+   ```
+
+2. Install dependencies:
+   ```bash
+   # Using pnpm (recommended)
+   pnpm install
+   
+   # Or using npm
+   npm install
+   
+   # Or using yarn
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 🔑 API Key Setup
+
+1. Obtain an API key from [OpenAI](https://platform.openai.com/account/api-keys)
+2. Enter your API key in the application when prompted
+3. The key is stored in your browser's local storage for convenience
+
+## 🛠️ Building for Production
+
+To create a production build:
+
+```bash
+pnpm build
+# or
+npm run build
+# or
+yarn build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The built files will be in the `dist` directory.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📝 License
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 Acknowledgements
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [OpenAI Whisper API](https://openai.com/research/whisper)
+- [Lucide Icons](https://lucide.dev/)
+
+---
+
+Made with ❤️ by [Yasel Pérez Pupo](https://github.com/YPPupo)
